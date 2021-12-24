@@ -1,0 +1,24 @@
+<body class="background" style="overflow-x: hidden;">
+    <section id="Home-section">
+        <div class="container">
+
+            <div class="row content pt-5">
+                {{#each products}}
+                <div class="col-12 col-md-4" style="padding: 40px;">
+                   <div class="card" style="width: 18rem;">
+  <div class="card-body" style="background-color: #102c39
+;" >
+    <h5 class="card-title text-light">{{this.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted text-light ">{{this.category}}</h6>
+    <p class="card-text text-light">{{this.description}}</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+    </section>
+</body>

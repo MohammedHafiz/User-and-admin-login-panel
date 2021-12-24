@@ -1,0 +1,103 @@
+<style>
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/6066072/pexels-photo-6066072.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_section {
+  width: 90%;
+}
+input {
+  width: 100%;
+  padding: 15px;
+  padding-left: 45px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 15px;
+}
+input::placeholder {
+  color: white;
+}
+.email {
+  background: url("https://image.flaticon.com/icons/png/512/732/732200.png") no-repeat 10px 11px;
+  background-size: 24px;
+}
+.password {
+  background: url("../images/pass.png") no-repeat 8px 9px;
+  background-size: 24px;
+}
+.username{
+  background: url("https://img-premium.flaticon.com/png/512/506/premium/506185.png?token=exp=1629398419~hmac=c9adb960462d1c08b198d4040895bcd5") no-repeat 10px 15px;
+  background-size: 24px;
+
+}
+.submit {
+  letter-spacing: 3px;
+  background: #102c39  ;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+input[type="submit"]:hover {
+  background: #102c39;
+  border: 2px solid white;
+  border-radius: 25px
+}
+.content {
+  justify-content: center;
+}
+.button {
+  background-color: #102c39
+  ;
+  
+}
+.background{
+  background-image: url("https://images.pexels.com/photos/6066072/pexels-photo-6066072.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+
+}
+</style>
+<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="bg">
+    <section>
+        <div class="container">
+            <div class="pb-3">
+                <h1 class="text-light" style="text-align: center;">
+                    Hey Admin !!<br>You Can now edit user details</h1>
+            </div>
+            <div class="login_section col-12" style=" height: 250px; padding-top: 25px;">
+                <form action="/admin/adminEdit/{{user._id}}" method="post" autocomplete="off">
+                    <div style="margin-bottom: 15px;">
+                         <input type="text" name="Username" class="username" id="username" value='{{user.Username}}' placeholder="Username" required />
+                        <p class="errormsg" style="color:red ;" id="checkemail"></p>
+                        <input type="text" name="Email" class="email" id="email" value="{{user.Email}}" placeholder="Email" required />
+                        <p class="errormsg" style="color:red ;" id="checkemail"></p>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn  submit" value="Update Details" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"crossorigin="anonymous"></script>
+ 
+</body>
